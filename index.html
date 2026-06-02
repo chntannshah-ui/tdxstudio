@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TDX Studio — Tina Dharamsey · Cultural Architecture &amp; Experiential Placemaking</title>
+<meta name="description" content="TDX Studio is the design practice of Tina Dharamsey — architect, scenographer, and cultural strategist. 25+ years of designing culture as a living spatial experience, not as an exhibit." />
+<meta property="og:title" content="TDX Studio — Tina Dharamsey" />
+<meta property="og:description" content="Worlds don't happen by chance. They are designed." />
+<meta property="og:image" content="img/hero-cover-v2.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Pinyon+Script&family=Manrope:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,300..600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #f4f1ec;
+    --paper: #ffffff;
+    --ink: #1a1d24;
+    --ink-2: #4a4f5a;
+    --ink-3: #7a7e85;
+    --dark: #14171c;
+    --rust: #c1502a;
+    --burgundy: #5a1a25;
+    --navy: #0e2845;
+    --hair: rgba(26,29,36,0.12);
+    --hair-dark: rgba(255,255,255,0.14);
+
+    --f-display: 'Cinzel', 'Trajan Pro', 'Cormorant Garamond', Georgia, serif;
+    --f-script: 'Pinyon Script', 'Pristina', 'Cormorant Garamond', cursive;
+    --f-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --f-accent: 'Cormorant Garamond', Georgia, serif;
+    --f-label: 'Bricolage Grotesque', 'Manrope', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-weight: 400;
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  .display {
+    font-family: var(--f-display);
+    font-weight: 400;
+    letter-spacing: -0.008em;
+    line-height: 1.02;
+  }
+  .display-italic { font-style: italic; }
+  .accent { font-family: var(--f-script); font-style: normal; font-weight: 400; text-transform: none; line-height: 0.9; }
+  .label {
+    font-family: var(--f-label);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-3);
+  }
+
+  /* weight restores for body-typeface elements (Instrument Serif is single weight; body fonts need their weights back) */
+  nav.top .brand { font-weight: 600; }
+  nav.top ul a { font-weight: 500; }
+  .submit-btn { font-weight: 600; }
+  .hero .eyebrow { font-weight: 500; }
+  .hero .meta { font-weight: 500; }
+  .tina-stats .stat .l { font-weight: 500; }
+  .film-stats .s .l { font-weight: 500; }
+  .contact-info .row .label { font-weight: 500; }
+  .form-row label { font-weight: 500; }
+  .eng-block .head-eng { font-weight: 600; }
+  footer.bot .brand { font-weight: 500; }
+
+  .wrap { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 720px) { .wrap { padding: 0 22px; } }
+
+  /* ============ NAV ============ */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(244, 241, 236, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--hair);
+  }
+  nav.top .brand {
+    font-family: var(--f-display);
+    font-size: 17px; letter-spacing: 0.22em; font-weight: 500;
+    text-transform: uppercase;
+    display: flex; align-items: center; gap: 14px;
+    color: var(--dark);
+  }
+  nav.top .brand .x {
+    width: 56px;
+    aspect-ratio: 181/122;
+    display: block;
+    background: url('img/logo-mark.png') center/contain no-repeat;
+    flex-shrink: 0;
+  }
+  nav.top .brand .name {
+    display: block;
+    line-height: 1;
+  }
+  nav.top ul { display: flex; gap: 36px; list-style: none; }
+  nav.top ul a {
+    font-family: var(--f-label);
+    font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase;
+    color: var(--ink-2); font-weight: 500; transition: color .2s;
+  }
+  nav.top ul a:hover { color: var(--rust); }
+  @media (max-width: 820px) {
+    nav.top ul { display: none; }
+    nav.top { padding: 14px 22px; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #f4ede0;  /* warm cream base */
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+  /* base painting — LIGHT, faded into mist */
+  .hero .bg {
+    position: absolute; inset: 0;
+    background-image: url('img/hero-cover-v2.jpg');
+    background-size: cover;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+    opacity: 0.62;  /* faded but visible — washed by cream wash + fog */
+    filter: saturate(0.75) brightness(1.10) contrast(0.92);
+    animation: hero-drift 36s ease-in-out infinite;
+  }
+  @keyframes hero-drift {
+    0%, 100% { transform: scale(1.0) translateX(0); }
+    50%      { transform: scale(1.05) translateX(-1.2%); }
+  }
+  @media (min-width: 1600px) {
+    .hero .bg { background-position: center center; }
+  }
+  @media (max-width: 720px) {
+    .hero .bg {
+      background-image: url('img/hero-cover-mobile.jpg');
+      background-position: center top;
+    }
+  }
+  /* cream wash — subtle, doesn't overpower the fog */
+  .hero .scrim-2 {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg,
+        rgba(255, 250, 240, 0.18) 0%,
+        rgba(255, 250, 240, 0.05) 40%,
+        transparent 70%,
+        rgba(245, 235, 220, 0.20) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ===== FOG LAYERS — 4 layers, varied speeds + depths + movement directions ===== */
+  /* Each layer has a different parallax depth (blur amount + scale) and motion path.
+     Combined they create real rolling-mist feel: deeper layers drift slow, foreground wisps streak. */
+  .hero .fog {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .hero .fog .layer {
+    position: absolute;
+    will-change: transform;
+  }
+
+  /* Deepest layer — heavy blur, biggest blobs, slow gentle drift */
+  .hero .fog .layer-back {
+    top: -40%; left: -40%;
+    width: 180%; height: 180%;
+    background:
+      radial-gradient(ellipse 60% 40% at 25% 30%, rgba(255, 252, 245, 0.55) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 38% at 70% 55%, rgba(252, 246, 232, 0.50) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 35% at 50% 80%, rgba(255, 250, 240, 0.45) 0%, transparent 60%);
+    filter: blur(70px);
+    opacity: 0.65;
+    animation: fog-back 48s ease-in-out infinite alternate;
+  }
+
+  /* Mid layer — medium blur, more distinct blobs, moderate horizontal drift */
+  .hero .fog .layer-mid {
+    top: -25%; left: -25%;
+    width: 160%; height: 160%;
+    background:
+      radial-gradient(ellipse 40% 25% at 20% 50%, rgba(255, 253, 248, 0.78) 0%, transparent 55%),
+      radial-gradient(ellipse 38% 22% at 65% 30%, rgba(252, 246, 232, 0.72) 0%, transparent 55%),
+      radial-gradient(ellipse 35% 22% at 85% 70%, rgba(255, 250, 240, 0.70) 0%, transparent 55%),
+      radial-gradient(ellipse 32% 20% at 45% 25%, rgba(248, 240, 220, 0.65) 0%, transparent 55%);
+    filter: blur(35px);
+    opacity: 0.85;
+    animation: fog-mid 28s ease-in-out infinite alternate;
+  }
+
+  /* Front layer — least blur, sharp visible wisps, fast streaking movement */
+  .hero .fog .layer-front {
+    top: -20%; left: -20%;
+    width: 150%; height: 150%;
+    background:
+      radial-gradient(ellipse 25% 14% at 30% 60%, rgba(255, 255, 250, 0.85) 0%, transparent 55%),
+      radial-gradient(ellipse 22% 12% at 65% 75%, rgba(255, 253, 245, 0.78) 0%, transparent 55%),
+      radial-gradient(ellipse 20% 11% at 85% 35%, rgba(255, 250, 238, 0.72) 0%, transparent 55%),
+      radial-gradient(ellipse 18% 10% at 45% 40%, rgba(255, 253, 245, 0.70) 0%, transparent 55%),
+      radial-gradient(ellipse 16% 9% at 90% 60%, rgba(255, 255, 250, 0.65) 0%, transparent 55%);
+    filter: blur(18px);
+    opacity: 0.85;
+    animation: fog-front 18s linear infinite;
+  }
+
+  /* Horizontal rolling cloud sweep — visible mass moving across the frame */
+  .hero .fog .layer-sweep {
+    top: 20%; left: -50%;
+    width: 200%; height: 60%;
+    background:
+      radial-gradient(ellipse 35% 50% at 30% 50%, rgba(255, 253, 245, 0.70) 0%, transparent 65%),
+      radial-gradient(ellipse 30% 45% at 70% 50%, rgba(252, 246, 232, 0.65) 0%, transparent 65%);
+    filter: blur(45px);
+    opacity: 0.75;
+    animation: fog-sweep 32s linear infinite;
+  }
+
+  @keyframes fog-back {
+    0%   { transform: translate(0%, 0%) scale(1.00); }
+    50%  { transform: translate(5%, -3%) scale(1.08); }
+    100% { transform: translate(-4%, 4%) scale(1.05); }
+  }
+  @keyframes fog-mid {
+    0%   { transform: translate(-8%, 0%) scale(1.00); opacity: 0.75; }
+    50%  { transform: translate(10%, -5%) scale(1.12); opacity: 0.95; }
+    100% { transform: translate(-6%, 6%) scale(1.06); opacity: 0.80; }
+  }
+  @keyframes fog-front {
+    0%   { transform: translateX(-15%) translateY(0%); }
+    100% { transform: translateX(15%) translateY(-3%); }
+  }
+  @keyframes fog-sweep {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(50%); }
+  }
+
+  /* subtle vignette — only at the edges, so the centre stays bright */
+  .hero .scrim {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 95% 85% at 50% 50%, transparent 60%, rgba(70, 55, 40, 0.18) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero .vignette {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 0%, transparent 75%, rgba(50, 40, 30, 0.15) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ===== HERO CONTENT — dark type on the light foggy bg, no chips ===== */
+  .hero-content {
+    position: relative; z-index: 3;
+    width: 100%;
+    min-height: calc(100vh - 190px);
+    display: flex; align-items: flex-start;
+    padding-left: 6vw; padding-right: 4vw;
+    padding-top: 2vw;
+  }
+  .hero-text { max-width: 720px; width: 100%; }
+  .hero .eyebrow {
+    color: var(--ink);
+    font-family: var(--f-label);
+    font-size: 11px; letter-spacing: 0.32em; font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    display: inline-flex; align-items: center; gap: 14px;
+  }
+  .hero .eyebrow::before {
+    content: ''; width: 36px; height: 1px; background: var(--ink);
+  }
+  .hero h1 {
+    color: var(--dark);
+    font-size: clamp(36px, 5.2vw, 78px);
+    line-height: 1.08;
+    margin-bottom: 36px;
+    text-shadow: 0 1px 22px rgba(255, 248, 232, 0.7), 0 1px 4px rgba(255, 248, 232, 0.5);
+  }
+  .hero h1 .it {
+    font-family: var(--f-script);
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.9;
+    color: var(--rust);
+    font-size: 1.45em;
+    text-shadow: 0 1px 18px rgba(255, 248, 232, 0.8);
+  }
+  .hero .lede {
+    color: #2a2620;
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.65;
+    max-width: 540px;
+    font-weight: 500;
+    margin-bottom: 32px;
+    text-shadow: 0 1px 14px rgba(255, 248, 232, 0.75), 0 0 3px rgba(255, 248, 232, 0.6);
+  }
+  .hero .meta {
+    position: absolute; bottom: 88px; left: 6vw;
+    display: flex; gap: 24px; align-items: center;
+    color: var(--ink);
+    font-family: var(--f-label);
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600;
+    flex-wrap: wrap;
+    z-index: 3;
+    text-shadow: 0 1px 10px rgba(255, 248, 232, 0.7);
+  }
+  .hero .meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--rust); flex-shrink: 0; }
+  .hero .scroll {
+    position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+    color: var(--ink); font-size: 10px; letter-spacing: 0.32em;
+    z-index: 3;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    animation: bob 2.2s ease-in-out infinite;
+    text-transform: uppercase; font-family: var(--f-label); font-weight: 600;
+    text-shadow: 0 1px 10px rgba(255, 248, 232, 0.8);
+  }
+  .hero .scroll .line { width: 1px; height: 32px; background: var(--ink); opacity: 0.55; }
+  @keyframes bob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+
+  /* reduced motion — disable animations */
+  @media (prefers-reduced-motion: reduce) {
+    .hero .bg, .hero .fog .layer { animation: none; }
+  }
+
+  @media (max-width: 720px) {
+    .hero { padding-top: 88px; padding-bottom: 72px; }
+    .hero-content { padding-left: 22px; padding-right: 22px; }
+    .hero .meta { left: 22px; bottom: 84px; gap: 16px; font-size: 10px; }
+    .hero h1 .it {
+    font-family: var(--f-script);
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.9; font-size: 1.25em; }
+  }
+
+  /* ============ STATEMENT ============ */
+  .statement {
+    padding: 140px 0 140px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--hair);
+  }
+  .statement .wrap { max-width: 980px; }
+  .statement .label { display: block; margin-bottom: 36px; }
+  .statement h2 {
+    font-size: clamp(38px, 4.8vw, 70px);
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 28px;
+    letter-spacing: -0.010em;
+    font-weight: 400;
+  }
+  .statement h2 .accent { color: var(--burgundy); font-size: 1.05em; }
+  .statement .body {
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: 1.7;
+    color: var(--ink-2);
+    max-width: 740px;
+  }
+  .statement .body + .body { margin-top: 18px; }
+
+  /* ============ TINA SECTION ============ */
+  .tina {
+    padding: 120px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--hair);
+  }
+  .tina-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .tina-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .tina-image {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: #1a1d24;
+  }
+  .tina-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .tina-image .name-tag {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 18px 22px;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.6));
+    color: #fff;
+    display: flex; justify-content: space-between; align-items: end;
+  }
+  .tina-image .name-tag h3 {
+    font-family: var(--f-display);
+    font-size: 20px; font-weight: 500; letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .tina-image .name-tag span {
+    font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .tina-copy .label { margin-bottom: 24px; }
+  .tina-copy h2 {
+    font-size: clamp(36px, 4.2vw, 58px);
+    line-height: 1.08;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+  .tina-copy h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: var(--rust); }
+  .tina-copy p {
+    font-size: 17px; line-height: 1.75;
+    color: var(--ink-2);
+    margin-bottom: 18px;
+  }
+  .tina-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 28px; margin-top: 36px;
+    padding-top: 36px;
+    border-top: 1px solid var(--hair);
+  }
+  .tina-stats .stat .n {
+    font-family: var(--f-display);
+    font-size: 42px; font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .tina-stats .stat .l {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 400;
+  }
+
+  /* ============ PHILOSOPHY ============ */
+  .philosophy {
+    padding: 140px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--hair);
+  }
+  .philosophy .head { max-width: 880px; margin-bottom: 80px; }
+  .philosophy .head .label { display: block; margin-bottom: 28px; }
+  .philosophy .head h2 {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.05;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+  }
+  .philosophy .head h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: var(--burgundy); }
+  .philosophy .head p {
+    font-size: 18px; line-height: 1.7;
+    color: var(--ink-2);
+    max-width: 680px;
+    margin-top: 24px;
+  }
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--hair);
+    border: 1px solid var(--hair);
+  }
+  @media (max-width: 820px) { .principles { grid-template-columns: 1fr; } }
+  .principle {
+    background: var(--bg);
+    padding: 56px 40px;
+  }
+  .principle .roman {
+    font-family: var(--f-display);
+    color: var(--rust); font-size: 18px;
+    margin-bottom: 28px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+  .principle h3 {
+    font-family: var(--f-display);
+    font-size: 36px; font-weight: 400;
+    letter-spacing: -0.008em;
+    margin-bottom: 18px;
+    line-height: 1.05;
+  }
+  .principle p {
+    font-size: 15px; line-height: 1.7; color: var(--ink-2);
+  }
+
+  /* ============ SIX LANGUAGES (DOMAIN) — FIXED CROPS ============ */
+  .domains {
+    padding: 140px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--hair);
+  }
+  .domains .head { display: flex; gap: 80px; align-items: end; margin-bottom: 80px; }
+  @media (max-width: 900px) { .domains .head { flex-direction: column; align-items: start; gap: 24px; } }
+  .domains .head .left { flex: 1.2; }
+  .domains .head .label { display: block; margin-bottom: 24px; }
+  .domains .head h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+  }
+  .domains .head h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: var(--rust); }
+  .domains .head .right { flex: 1; max-width: 420px; }
+  .domains .head .right p {
+    font-size: 16px; line-height: 1.7; color: var(--ink-2);
+  }
+
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 980px) { .domain-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .domain-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+  .domain-card {
+    display: flex; flex-direction: column;
+  }
+  .domain-card .img-wrap {
+    position: relative;
+    overflow: hidden;
+    background: #1a1d24;
+    margin-bottom: 24px;
+    aspect-ratio: 2/3;  /* portrait — accommodates the natural ratios of all 6 images */
+  }
+  .domain-card .img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 1.2s cubic-bezier(.16,.84,.34,1);
+  }
+  .domain-card:hover .img-wrap img { transform: scale(1.04); }
+  /* subtle painterly vignette on hover */
+  .domain-card .img-wrap::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.35) 100%);
+    pointer-events: none;
+    transition: opacity .4s;
+  }
+  .domain-card .img-wrap .num {
+    position: absolute; top: 16px; left: 16px;
+    font-family: var(--f-display);
+    color: #fff; font-size: 14px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    z-index: 2;
+  }
+  .domain-card h3 {
+    font-family: var(--f-display);
+    font-size: 22px; font-weight: 400;
+    letter-spacing: -0.006em;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .domain-card ul {
+    list-style: none;
+    font-size: 14px; color: var(--ink-2);
+    line-height: 1.6;
+  }
+  .domain-card ul li {
+    padding-left: 16px; position: relative;
+    margin-bottom: 6px;
+  }
+  .domain-card ul li::before {
+    content: '·'; position: absolute; left: 4px;
+    color: var(--rust); font-weight: 700; font-size: 18px;
+    top: -2px;
+  }
+
+  /* ============ FILM & TV — NEW SECTION ============ */
+  .film-tv {
+    padding: 140px 0;
+    background: var(--dark);
+    color: #f0ece4;
+    border-bottom: 1px solid var(--hair-dark);
+    position: relative;
+  }
+  .film-tv::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 65% at center, transparent 50%, rgba(0,0,0,0.45) 100%);
+    pointer-events: none;
+  }
+  .film-tv .wrap { position: relative; z-index: 1; }
+  .film-tv .head { display: flex; gap: 80px; align-items: end; margin-bottom: 72px; }
+  @media (max-width: 900px) { .film-tv .head { flex-direction: column; align-items: start; gap: 24px; } }
+  .film-tv .head .left { flex: 1.2; }
+  .film-tv .head .label { display: block; margin-bottom: 24px; color: rgba(255,255,255,0.5); }
+  .film-tv .head h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+    color: #fff;
+  }
+  .film-tv .head h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: #e89572; }
+  .film-tv .head .right { flex: 1; max-width: 460px; }
+  .film-tv .head .right p { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.65); }
+
+  .film-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px; margin-bottom: 72px;
+    padding: 36px 0;
+    border-top: 1px solid var(--hair-dark);
+    border-bottom: 1px solid var(--hair-dark);
+  }
+  .film-stats .s .n {
+    font-family: var(--f-display);
+    font-size: 56px; font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #fff; line-height: 1;
+    margin-bottom: 12px;
+  }
+  .film-stats .s .l {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); font-weight: 400;
+  }
+  @media (max-width: 720px) {
+    .film-stats { grid-template-columns: 1fr; gap: 24px; }
+    .film-stats .s .n {
+    font-family: var(--f-display);
+    font-size: 56px; font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #fff; line-height: 1;
+    margin-bottom: 12px;
+  }
+  }
+
+  .tv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 980px) { .tv-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .tv-grid { grid-template-columns: 1fr; gap: 14px; } }
+
+  .tv-card {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+  }
+  .tv-card .img {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: #1a1d24;
+  }
+  .tv-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(.16,.84,.34,1), filter .6s;
+    filter: brightness(0.95) saturate(0.96);
+  }
+  .tv-card:hover img { transform: scale(1.04); filter: brightness(1.02) saturate(1.08); }
+  /* subtle inner vignette only on the image area, not over titles */
+  .tv-card .img::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 65%, rgba(0,0,0,0.35) 100%);
+    pointer-events: none;
+  }
+  .tv-card .meta {
+    padding: 18px 4px 8px;
+    color: #fff;
+  }
+  .tv-card .meta .ttl {
+    font-family: var(--f-display);
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: rgba(255,255,255,0.92);
+  }
+
+  /* ============ SCROLL-REVEAL CINEMATIC BANDS ============ */
+  /* Fixed-background parallax — as user scrolls, content moves while bg stays anchored to viewport.
+     Creates the cinematic "window into a painting" feel that classic parallax sites use. */
+  .scroll-reveal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #faf3e3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* the key — gives true parallax behaviour */
+  }
+  .sr-ceremonial {
+    background-image: url('img/scroll-ceremonial.jpg');
+  }
+  .sr-architecture {
+    background-image: url('img/scroll-architecture.jpg');
+  }
+
+  /* vignette overlay sits over the fixed bg */
+  .scroll-reveal .sr-vignette {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 65% 55% at 50% 50%, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.20) 45%, transparent 75%),
+      radial-gradient(ellipse 85% 75% at 50% 50%, transparent 30%, rgba(0,0,0,0.55) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 25%, transparent 65%, rgba(0,0,0,0.5) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* the old .sr-bg + .sr-sticky are kept as a no-op for backward-compat in markup */
+  .scroll-reveal .sr-bg { display: none; }
+  .scroll-reveal .sr-sticky {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .scroll-reveal .sr-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 32px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 1.2s ease 0.3s, transform 1.2s cubic-bezier(.16,.84,.34,1) 0.3s;
+  }
+  .scroll-reveal.visible .sr-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .scroll-reveal .label {
+    color: rgba(255,255,255,0.78);
+    display: block;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 14px rgba(0,0,0,0.7);
+  }
+  .scroll-reveal h2 {
+    font-size: clamp(34px, 5.2vw, 78px);
+    line-height: 1.08;
+    color: #ffffff;
+    margin-bottom: 28px;
+    letter-spacing: 0.005em;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5);
+  }
+  .scroll-reveal h2 .it {
+    color: #f4ad88;
+    text-shadow: 0 2px 22px rgba(0,0,0,0.85), 0 0 8px rgba(0,0,0,0.5);
+  }
+  .scroll-reveal .sr-lede {
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.65;
+    color: rgba(255,255,255,0.92);
+    max-width: 580px;
+    margin: 0 auto;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.75), 0 0 3px rgba(0,0,0,0.4);
+  }
+
+  /* Mobile fine-tuning — background-attachment: fixed is unreliable on iOS Safari,
+     so fall back to normal scroll on mobile and use the mobile-cropped bg image */
+  @media (max-width: 720px) {
+    .scroll-reveal {
+      background-attachment: scroll;
+      min-height: 78vh;
+    }
+    .sr-ceremonial {
+      background-image: url('img/scroll-ceremonial-mobile.jpg');
+    }
+    .sr-architecture {
+      background-image: url('img/scroll-architecture-mobile.jpg');
+    }
+    .scroll-reveal .sr-content {
+      padding: 0 22px;
+    }
+    .scroll-reveal .label { margin-bottom: 22px; }
+    .scroll-reveal h2 { margin-bottom: 22px; }
+    .scroll-reveal .sr-vignette {
+      background:
+        radial-gradient(ellipse 80% 45% at 50% 50%, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.35) 55%, transparent 85%),
+        radial-gradient(ellipse 90% 75% at 50% 50%, transparent 25%, rgba(0,0,0,0.65) 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.45) 0%, transparent 22%, transparent 68%, rgba(0,0,0,0.55) 100%);
+    }
+    .scroll-reveal .sr-content {
+      background: rgba(20, 23, 28, 0.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 32px 22px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .scroll-reveal h2 {
+      text-shadow: 0 2px 18px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7);
+    }
+    .scroll-reveal .sr-lede {
+      text-shadow: 0 1px 12px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.6);
+    }
+  }
+
+  /* ============ BTS — BEHIND THE SCENES ============ */
+  .bts {
+    padding: 140px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--hair);
+    position: relative;
+  }
+  .bts .head { display: flex; gap: 80px; align-items: end; margin-bottom: 72px; }
+  @media (max-width: 900px) { .bts .head { flex-direction: column; align-items: start; gap: 24px; } }
+  .bts .head .left { flex: 1.2; }
+  .bts .head .label { display: block; margin-bottom: 24px; }
+  .bts .head h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.08;
+    letter-spacing: 0.005em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .bts .head h2 .it {
+    font-family: var(--f-script);
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.9; color: var(--burgundy); }
+  .bts .head .right { flex: 1; max-width: 460px; }
+  .bts .head .right p { font-size: 16px; line-height: 1.7; color: var(--ink-2); }
+
+  .bts-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 220px;
+    gap: 6px;
+    background: var(--bg);  /* light cream — matches page bg */
+    padding: 6px;
+  }
+  /* Asymmetric mosaic: 6 cards in a curated composition.
+     Card 1: 5 cols × 2 rows (anchor left, large)
+     Card 2: 4 cols × 1 row (top right)
+     Card 3: 3 cols × 2 rows (far right, vertical)
+     Card 4: 4 cols × 1 row (mid right)
+     Card 5: 7 cols × 2 rows (bottom left, wide hero)
+     Card 6: 5 cols × 2 rows (bottom right)
+  */
+  .bts-card:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+  .bts-card:nth-child(2) { grid-column: span 4; grid-row: span 1; }
+  .bts-card:nth-child(3) { grid-column: span 3; grid-row: span 2; }
+  .bts-card:nth-child(4) { grid-column: span 4; grid-row: span 1; }
+  .bts-card:nth-child(5) { grid-column: span 7; grid-row: span 2; }
+  .bts-card:nth-child(6) { grid-column: span 5; grid-row: span 2; }
+
+  @media (max-width: 980px) {
+    .bts-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 180px; }
+    .bts-card:nth-child(1) { grid-column: span 4; grid-row: span 2; }
+    .bts-card:nth-child(2) { grid-column: span 2; grid-row: span 1; }
+    .bts-card:nth-child(3) { grid-column: span 2; grid-row: span 1; }
+    .bts-card:nth-child(4) { grid-column: span 3; grid-row: span 1; }
+    .bts-card:nth-child(5) { grid-column: span 3; grid-row: span 1; }
+    .bts-card:nth-child(6) { grid-column: span 6; grid-row: span 2; }
+  }
+  @media (max-width: 600px) {
+    .bts-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; gap: 3px; padding: 3px; }
+    .bts-card:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+    .bts-card:nth-child(1), .bts-card:nth-child(5) { grid-row: span 2; }
+  }
+
+  .bts-card {
+    position: relative;
+    overflow: hidden;
+    background: #1a1d24;
+  }
+  .bts-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.6s cubic-bezier(.16,.84,.34,1), filter .8s;
+    /* gentle painterly wash — soft, warm, low-contrast */
+    filter: sepia(0.10) saturate(0.85) contrast(0.96) brightness(0.98);
+  }
+  .bts-card:hover img {
+    transform: scale(1.04);
+    filter: sepia(0) saturate(1) contrast(1) brightness(1);
+  }
+  /* unified warm wash overlay — ties grid together */
+  .bts-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(193,80,42,0.04) 0%, transparent 60%, rgba(90,26,37,0.05) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .bts-card::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 90% 80% at center, transparent 55%, rgba(0,0,0,0.28) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .bts-card .cap {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 18px 20px;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.82));
+    color: #fff;
+    font-family: var(--f-label);
+    font-size: 11px; letter-spacing: 0.10em;
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 2;
+    display: flex; align-items: center; gap: 10px;
+    opacity: 0.92;
+    transition: opacity .3s;
+  }
+  .bts-card:hover .cap { opacity: 1; }
+  .bts-card .cap .ix {
+    font-family: var(--f-display);
+    font-size: 13px;
+    color: #e89572;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  /* ============ METHODOLOGY ============ */
+  .method {
+    padding: 140px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--hair);
+  }
+  .method .head { max-width: 880px; margin-bottom: 72px; }
+  .method .head .label { display: block; margin-bottom: 28px; }
+  .method .head h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+  }
+  .method .head h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: var(--navy); }
+
+  .method-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { .method-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .method-image { aspect-ratio: 2/3; overflow: hidden; background: #1a1d24; }
+  .method-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+  .method-steps { display: flex; flex-direction: column; gap: 0; }
+  .method-step {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--hair);
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .method-step:last-child { border-bottom: none; }
+  .method-step .num {
+    font-family: var(--f-display);
+    font-size: 22px; color: var(--rust);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .method-step h4 {
+    font-family: var(--f-display);
+    font-size: 22px; font-weight: 400;
+    letter-spacing: -0.006em;
+    margin-bottom: 8px;
+  }
+  .method-step p {
+    font-size: 14px; line-height: 1.65; color: var(--ink-2);
+  }
+
+  /* ============ DISTINCT ============ */
+  .distinct {
+    background: #1c1612;  /* warm dark umber — matches earthy palette */
+    padding: 140px 0;
+    color: #f0ece4;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+  }
+  .distinct::before {
+    /* subtle warm texture wash */
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 30% 20%, rgba(193, 80, 42, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 75% 80%, rgba(90, 26, 37, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .distinct::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 85% 75% at center, transparent 50%, rgba(0,0,0,0.4) 100%);
+    pointer-events: none;
+  }
+  .distinct .wrap { max-width: 1160px; position: relative; z-index: 1; }
+  .distinct .head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; margin-bottom: 72px; }
+  @media (max-width: 900px) { .distinct .head { grid-template-columns: 1fr; gap: 32px; } }
+  .distinct .label { color: rgba(232, 149, 114, 0.85); display: block; margin-bottom: 24px; }
+  .distinct .head h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.05;
+    color: #fff;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+  }
+  .distinct .head h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: #f4ad88; }
+  .distinct .head .lede {
+    font-family: var(--f-accent);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.85);
+  }
+  .distinct-list {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  @media (max-width: 720px) { .distinct-list { grid-template-columns: 1fr; } }
+  .distinct-item {
+    background: #1c1612;
+    padding: 36px 32px;
+    transition: background .3s;
+  }
+  .distinct-item:hover { background: #221a14; }
+  .distinct-item .n {
+    font-family: var(--f-display);
+    color: #e89572; font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+  .distinct-item p {
+    font-size: 16px; line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+    font-weight: 400;
+  }
+
+  /* ============ ENGAGEMENTS ============ */
+  .engagements {
+    padding: 140px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--hair);
+  }
+  .engagements .head { max-width: 900px; margin-bottom: 72px; }
+  .engagements .head .label { display: block; margin-bottom: 28px; }
+  .engagements .head h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+  }
+  .engagements .head h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: var(--rust); }
+  .engagements-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--hair);
+  }
+  @media (max-width: 820px) { .engagements-grid { grid-template-columns: 1fr; } }
+  .eng-block {
+    padding: 56px 48px;
+    position: relative;
+  }
+  /* both blocks now use warm earthy tones from the site's palette,
+     just shifted for hierarchy — first is deeper umber, second is warmer brown */
+  .eng-block.rust {
+    background: #1c1612;  /* warm umber — matches Distinct + BTS */
+    color: #faf3e3;
+  }
+  .eng-block.burgundy {
+    background: #2a1d18;  /* a touch warmer/lighter umber-brown */
+    color: #faf3e3;
+  }
+  .eng-block.rust::before,
+  .eng-block.burgundy::before {
+    /* subtle warm gradient wash to add depth */
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 30% 20%, rgba(193, 80, 42, 0.10) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .eng-block.burgundy::before {
+    background: radial-gradient(ellipse 80% 60% at 70% 30%, rgba(90, 26, 37, 0.18) 0%, transparent 60%);
+  }
+  .eng-block > * { position: relative; z-index: 1; }
+  .eng-block .head-eng {
+    font-family: var(--f-body);
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 28px;
+    color: rgba(244, 173, 136, 0.85);  /* coral accent matching Distinct */
+  }
+  .eng-block h3 {
+    font-family: var(--f-display);
+    font-size: 28px; line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 28px;
+    letter-spacing: -0.008em;
+    color: #ffffff;
+  }
+  .eng-block ul {
+    list-style: none;
+    font-size: 15px; line-height: 1.75;
+    color: rgba(250, 243, 227, 0.88);
+  }
+  .eng-block ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    display: flex; gap: 12px;
+  }
+  .eng-block ul li:last-child { border-bottom: none; }
+  .eng-block ul li::before {
+    content: '→';
+    color: rgba(244, 173, 136, 0.7);
+  }
+
+  /* ============ MANIFESTO ============ */
+  .manifesto {
+    padding: 160px 0;
+    background: var(--bg);
+    text-align: center;
+    border-bottom: 1px solid var(--hair);
+    position: relative;
+  }
+  .manifesto::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at center, transparent 45%, rgba(20,23,28,0.10) 100%);
+    pointer-events: none;
+  }
+  .manifesto .wrap { position: relative; z-index: 1; max-width: 940px; }
+  .manifesto .x-mark {
+    width: 140px;
+    aspect-ratio: 181/122;
+    margin: 0 auto 48px;
+    background: url('img/logo-mark.png') center/contain no-repeat;
+    opacity: 0.85;
+  }
+  .manifesto h2 {
+    font-family: var(--f-display);
+    font-size: clamp(40px, 5.6vw, 86px);
+    line-height: 1.08;
+    letter-spacing: -0.008em;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .manifesto h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: var(--burgundy); }
+  .manifesto h2 .line { display: block; }
+  .manifesto .sig {
+    font-family: var(--f-accent); font-style: italic;
+    font-size: 20px; color: var(--ink-2);
+    margin-top: 48px;
+  }
+
+  /* ============ CONTACT (form, NO phone) ============ */
+  .contact {
+    padding: 140px 0;
+    background: var(--dark);
+    color: #f0ece4;
+    position: relative;
+  }
+  .contact::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 70% at center, transparent 45%, rgba(0,0,0,0.5) 100%);
+    pointer-events: none;
+  }
+  .contact .wrap { position: relative; z-index: 1; }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .contact .label { color: rgba(255,255,255,0.5); display: block; margin-bottom: 24px; }
+  .contact h2 {
+    font-family: var(--f-display);
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.05;
+    color: #fff;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+  .contact h2 .it { font-family: var(--f-script); font-style: normal; text-transform: none; font-weight: 400; letter-spacing: 0; color: #e89572; }
+  .contact .lede {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 40px;
+    max-width: 380px;
+  }
+  .contact-info {
+    display: flex; flex-direction: column; gap: 22px;
+    padding-top: 32px;
+    border-top: 1px solid var(--hair-dark);
+  }
+  .contact-info .row .label {
+    font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 6px; display: block;
+  }
+  .contact-info .row .v {
+    font-family: var(--f-display);
+    font-size: 18px; color: #fff;
+    font-weight: 400; letter-spacing: -0.005em;
+  }
+  .contact-info .row .v a:hover { color: #e89572; }
+
+  /* form */
+  .contact-form {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    padding: 40px;
+  }
+  .form-row { margin-bottom: 22px; }
+  .form-row.two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 600px) { .form-row.two { grid-template-columns: 1fr; } }
+  .form-row label {
+    display: block;
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .form-row input,
+  .form-row textarea,
+  .form-row select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding: 12px 0;
+    color: #fff;
+    font-family: var(--f-body);
+    font-size: 16px;
+    transition: border-color .2s;
+    outline: none;
+    border-radius: 0;
+  }
+  .form-row select { background-color: var(--dark); cursor: pointer; }
+  .form-row select option { background: var(--dark); color: #fff; }
+  .form-row input:focus,
+  .form-row textarea:focus,
+  .form-row select:focus { border-bottom-color: #e89572; }
+  .form-row textarea { min-height: 110px; resize: vertical; }
+  .form-row input::placeholder, .form-row textarea::placeholder { color: rgba(255,255,255,0.30); }
+
+  .submit-btn {
+    background: #e89572;
+    color: #14171c;
+    border: none;
+    padding: 18px 36px;
+    font-family: var(--f-body);
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+    margin-top: 12px;
+    display: inline-flex; align-items: center; gap: 14px;
+  }
+  .submit-btn:hover { background: #f0a585; transform: translateY(-1px); }
+  .submit-btn:active { transform: translateY(0); }
+  .form-note {
+    font-size: 12px; color: rgba(255,255,255,0.4);
+    margin-top: 18px;
+  }
+
+  /* ============ FOOTER ============ */
+  footer.bot {
+    padding: 56px 0 36px;
+    background: var(--dark);
+    border-top: 1px solid var(--hair-dark);
+    color: rgba(255,255,255,0.55);
+  }
+  footer.bot .row {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; letter-spacing: 0.04em;
+  }
+  @media (max-width: 720px) { footer.bot .row { flex-direction: column; gap: 16px; text-align: center; } }
+  footer.bot .brand {
+    display: flex; align-items: center; gap: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; font-size: 12px;
+    font-family: var(--f-display);
+  }
+  footer.bot .brand .x {
+    width: 36px;
+    aspect-ratio: 181/122;
+    background: url('img/logo-mark.png') center/contain no-repeat;
+    flex-shrink: 0;
+  }
+  footer.bot .credit {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    font-family: var(--f-label);
+    font-size: 10px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.42);
+  }
+  footer.bot .credit a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color .2s;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    padding-bottom: 1px;
+  }
+  footer.bot .credit a:hover {
+    color: var(--rust);
+    border-bottom-color: var(--rust);
+  }
+
+  /* small details */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a href="#top" class="brand"><span class="x"></span><span class="name">TDX Studio</span></a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#domains">Practice</a></li>
+    <li><a href="#film-tv">Film &amp; TV</a></li>
+    <li><a href="#bts">Behind</a></li>
+    <li><a href="#method">Method</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="bg"></div>
+  <div class="scrim-2"></div>
+  <div class="fog" aria-hidden="true">
+    <div class="layer layer-back"></div>
+    <div class="layer layer-mid"></div>
+    <div class="layer layer-sweep"></div>
+    <div class="layer layer-front"></div>
+  </div>
+  <div class="scrim"></div>
+  <div class="vignette"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="eyebrow">TDX Studio · Tina Dharamsey</div>
+      <h1 class="display">
+        Worlds don't<br/>
+        happen by chance.<br/>
+        They are <span class="it">designed.</span>
+      </h1>
+      <p class="lede">
+        At the intersection of architecture, scenography, heritage and ritual — interpreting India's civilisational depth into spaces, ceremonies, and cultural experiences that endure.
+      </p>
+    </div>
+  </div>
+  <div class="meta">
+    <span>Mumbai</span>
+    <span class="dot"></span>
+    <span>25+ Years</span>
+    <span class="dot"></span>
+    <span>Cultural Infrastructure</span>
+  </div>
+  <a href="#statement" class="scroll">
+    <span>Begin</span>
+    <span class="line"></span>
+  </a>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement" id="statement">
+  <div class="wrap">
+    <span class="label">— Who We Are</span>
+    <h2 class="display">
+      We do not <span class="accent display-italic">decorate</span> culture.<br/>
+      We interpret, structure,<br/>and spatialise it.
+    </h2>
+    <p class="body">
+      TDX Studio is a multidisciplinary cultural studio working at the intersection of architecture, scenography, heritage, and experiential storytelling. We collaborate with governments, institutions, and cultural bodies to create spaces and experiences that reflect India's civilisational depth, contemporary identity, and future aspirations.
+    </p>
+    <p class="body">
+      Every project is treated as cultural infrastructure — designed not for the inauguration day, but for the decades after.
+    </p>
+  </div>
+</section>
+
+<!-- SCROLL-REVEAL 1: CEREMONIAL OPULENCE -->
+<section class="scroll-reveal sr-ceremonial" data-reveal="1">
+  <div class="sr-sticky">
+    <div class="sr-bg" aria-hidden="true"></div>
+    <div class="sr-vignette" aria-hidden="true"></div>
+    <div class="sr-content">
+      <span class="label">— Cultural Scenography</span>
+      <h2 class="display">
+        Every ceremony is<br/>
+        a <span class="it">composition.</span>
+      </h2>
+      <p class="sr-lede">Spaces of ritual, opulence, and gathering — designed as scenography, not decoration. The grammar of an exhibition is the grammar of a film.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TINA -->
+<section class="tina" id="about">
+  <div class="wrap">
+    <div class="tina-grid">
+      <div class="tina-image">
+        <img src="img/tina-portrait.jpg" alt="Tina Dharamsey, Principal of TDX Studio" />
+        <div class="name-tag">
+          <h3>Tina Dharamsey</h3>
+          <span>Principal · TDX Studio</span>
+        </div>
+      </div>
+      <div class="tina-copy">
+        <span class="label">— Principal</span>
+        <h2 class="display">
+          Twenty-five years of<br/>
+          <span class="it">building worlds</span><br/>
+          people remember.
+        </h2>
+        <p>
+          Tina's practice began in film and television — over two decades of art direction across 200+ productions, building 500+ cinematic sets that translated stories into spaces audiences inhabited emotionally.
+        </p>
+        <p>
+          TDX Studio is the evolution of that craft into a wider domain — from cinematic sets to cultural infrastructure, from sets that lived for an episode to spaces that hold civilisational memory.
+        </p>
+        <div class="tina-stats">
+          <div class="stat"><div class="n">25<span style="font-size:0.6em">+</span></div><div class="l">Years of Practice</div></div>
+          <div class="stat"><div class="n">200<span style="font-size:0.6em">+</span></div><div class="l">Films &amp; TV Shows</div></div>
+          <div class="stat"><div class="n">500<span style="font-size:0.6em">+</span></div><div class="l">Cinematic Sets</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">— Our Philosophy</span>
+      <h2 class="display">
+        India's culture is not static history.<br/>
+        It is <span class="it">ritual, memory, movement,</span><br/>
+        and continuity.
+      </h2>
+      <p>Three principles guide every project we undertake — translating intangible cultural depth into tangible spatial experience.</p>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <div class="roman">I.</div>
+        <h3>Authenticity</h3>
+        <p>Grounded in research, archives, and lived traditions. We begin with the source — texts, testimonies, regional narratives — never with a moodboard.</p>
+      </div>
+      <div class="principle">
+        <div class="roman">II.</div>
+        <h3>Contemporaneity</h3>
+        <p>Expressed through modern spatial language, materials, and technology. Heritage is not a costume — it is a foundation to design from, in the present tense.</p>
+      </div>
+      <div class="principle">
+        <div class="roman">III.</div>
+        <h3>Longevity</h3>
+        <p>Designed for relevance beyond events and inaugurations. Every project is conceived as a long-form cultural asset — adaptable, reusable, enduring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAINS — SIX LANGUAGES, ONE GRAMMAR (cropping fix applied) -->
+<section class="domains" id="domains">
+  <div class="wrap">
+    <div class="head">
+      <div class="left">
+        <span class="label">— Core Domain of Work</span>
+        <h2 class="display">
+          Six languages.<br/>
+          One <span class="it">grammar of space.</span>
+        </h2>
+      </div>
+      <div class="right">
+        <p>The studio works across six interconnected disciplines — from one-night ceremonies to permanent cultural districts. The scale changes; the discipline does not.</p>
+      </div>
+    </div>
+
+    <div class="domain-grid">
+      <div class="domain-card" id="card-art">
+        <div class="img-wrap">
+          <img src="img/domain-artdir.jpg" alt="Art Direction and Set Design" />
+          <span class="num">i.</span>
+        </div>
+        <h3>Art Direction &amp; Set Design</h3>
+        <ul>
+          <li>Cinematic set construction</li>
+          <li>Period &amp; mythological worlds</li>
+          <li>Long-running serial design</li>
+        </ul>
+      </div>
+
+      <div class="domain-card" id="card-scenography">
+        <div class="img-wrap">
+          <img src="img/domain-ceremonial.jpg" alt="Cultural Scenography and Ceremonial Design" />
+          <span class="num">ii.</span>
+        </div>
+        <h3>Cultural Scenography &amp; Ceremonial Design</h3>
+        <ul>
+          <li>National &amp; state ceremonies</li>
+          <li>Cultural festivals &amp; celebrations</li>
+          <li>Opening &amp; closing spectacles</li>
+          <li>State &amp; country pavilions</li>
+        </ul>
+      </div>
+
+      <div class="domain-card" id="card-interiors">
+        <div class="img-wrap">
+          <img src="img/domain-experiential.jpg" alt="Experiential Architecture and Interiors" />
+          <span class="num">iii.</span>
+        </div>
+        <h3>Experiential Architecture &amp; Interiors</h3>
+        <ul>
+          <li>Cultural centres</li>
+          <li>Performance &amp; gathering spaces</li>
+          <li>Adaptive reuse of heritage structures</li>
+        </ul>
+      </div>
+
+      <div class="domain-card" id="card-placemaking">
+        <div class="img-wrap">
+          <img src="img/domain-districts.jpg" alt="Cultural Districts and Placemaking" />
+          <span class="num">iv.</span>
+        </div>
+        <h3>Cultural Districts &amp; Placemaking</h3>
+        <ul>
+          <li>Creative corridors (PPP models)</li>
+          <li>Artist &amp; cultural villages</li>
+          <li>Culture-led urban regeneration</li>
+        </ul>
+      </div>
+
+      <div class="domain-card" id="card-ip">
+        <div class="img-wrap">
+          <img src="img/domain-content.jpg" alt="Cultural IP, Research and Content" />
+          <span class="num">v.</span>
+        </div>
+        <h3>Cultural IP, Research &amp; Content</h3>
+        <ul>
+          <li>Travelling exhibitions</li>
+          <li>Cultural films &amp; publications</li>
+          <li>Signature annual cultural formats</li>
+        </ul>
+      </div>
+
+      <div class="domain-card" id="card-museum">
+        <div class="img-wrap">
+          <img src="img/domain-museums.jpg" alt="Museums, Exhibitions and Interpretation Spaces" />
+          <span class="num">vi.</span>
+        </div>
+        <h3>Museums, Exhibitions &amp; Interpretation Spaces</h3>
+        <ul>
+          <li>Permanent &amp; temporary museums</li>
+          <li>Heritage &amp; interpretation centres</li>
+          <li>Knowledge-driven immersive exhibitions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILM & TV — NEW SECTION -->
+<section class="film-tv" id="film-tv">
+  <div class="wrap">
+    <div class="head">
+      <div class="left">
+        <span class="label">— Where the practice began</span>
+        <h2 class="display">
+          Two decades on set,<br/>
+          before the <span class="it">studio.</span>
+        </h2>
+      </div>
+      <div class="right">
+        <p>Before TDX, there were two-and-a-half decades of film and television art direction — period epics, mythological worlds, domestic dramas, social storytelling. The set was the first laboratory for everything the studio now builds at civic and national scale.</p>
+      </div>
+    </div>
+
+    <div class="film-stats">
+      <div class="s"><div class="n">200+</div><div class="l">Films &amp; TV Shows</div></div>
+      <div class="s"><div class="n">500+</div><div class="l">Cinematic Sets</div></div>
+      <div class="s"><div class="n">25+</div><div class="l">Years on Set</div></div>
+    </div>
+
+    <div class="tv-grid">
+      <div class="tv-card">
+        <div class="img"><img src="img/tv-ashoka-king.jpg" alt="Chakravartin Ashoka Samrat" /></div>
+        <div class="meta"><div class="ttl">Chakravartin Ashoka Samrat</div></div>
+      </div>
+      <div class="tv-card">
+        <div class="img"><img src="img/tv-luvkush-hero.jpg" alt="Ram Siya Ke Luv Kush" /></div>
+        <div class="meta"><div class="ttl">Ram Siya Ke Luv Kush</div></div>
+      </div>
+      <div class="tv-card">
+        <div class="img"><img src="img/tv-radhakrishna.jpg" alt="Radha Krishn" /></div>
+        <div class="meta"><div class="ttl">Radha Krishn</div></div>
+      </div>
+      <div class="tv-card">
+        <div class="img"><img src="img/tv-kyunki.jpg" alt="Kyunki Saas Bhi Kabhi Bahu Thi" /></div>
+        <div class="meta"><div class="ttl">Kyunki Saas Bhi Kabhi Bahu Thi</div></div>
+      </div>
+      <div class="tv-card">
+        <div class="img"><img src="img/tv-tarak.jpg" alt="Taarak Mehta Ka Ooltah Chashmah" /></div>
+        <div class="meta"><div class="ttl">Taarak Mehta Ka Ooltah Chashmah</div></div>
+      </div>
+      <div class="tv-card">
+        <div class="img"><img src="img/tv-ladies.jpg" alt="Ladies Special" /></div>
+        <div class="meta"><div class="ttl">Ladies Special</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BTS — BEHIND THE SCENES -->
+<section class="bts" id="bts">
+  <div class="wrap">
+    <div class="head">
+      <div class="left">
+        <span class="label">— Behind the Scenes</span>
+        <h2 class="display">
+          The work, <span class="it">before</span><br/>
+          the work is seen.
+        </h2>
+      </div>
+      <div class="right">
+        <p>Cultural infrastructure is built on the ground — on scaffolding, on construction sites, in studios reviewing blueprints, in conversations with directors and crews. The visible result is the smallest part of the process.</p>
+      </div>
+    </div>
+
+    <div class="bts-grid">
+      <div class="bts-card">
+        <img src="img/bts-directing-set.jpg" alt="Directing the set under construction" />
+        <div class="cap"><span class="ix">i.</span> Directing the set</div>
+      </div>
+      <div class="bts-card">
+        <img src="img/bts-blueprints.jpg" alt="Reviewing blueprints on site" />
+        <div class="cap"><span class="ix">ii.</span> On site · reviewing blueprints</div>
+      </div>
+      <div class="bts-card">
+        <img src="img/bts-scaffold.jpg" alt="Set under build, scaffolding" />
+        <div class="cap"><span class="ix">iii.</span> Set under build</div>
+      </div>
+      <div class="bts-card">
+        <img src="img/bts-foundation.jpg" alt="Walking the foundation" />
+        <div class="cap"><span class="ix">iv.</span> Foundation walk-through</div>
+      </div>
+      <div class="bts-card">
+        <img src="img/bts-studio-team.jpg" alt="Studio review with team" />
+        <div class="cap"><span class="ix">v.</span> Studio · in review</div>
+      </div>
+      <div class="bts-card">
+        <img src="img/bts-director-meet.jpg" alt="In conversation with the director" />
+        <div class="cap"><span class="ix">vi.</span> In conversation with the director</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="method" id="method">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">— Approach &amp; Methodology</span>
+      <h2 class="display">
+        Cultural projects are not<br/>
+        decorated. They are <span class="it">authored.</span>
+      </h2>
+    </div>
+    <div class="method-grid">
+      <div class="method-image">
+        <img src="img/method-hero.jpg" alt="Spatial composition diagram — cultural depth and design" />
+      </div>
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="num">i.</div>
+          <div>
+            <h4>Cultural Research &amp; Context Mapping</h4>
+            <p>Archives, oral histories, regional narratives, stakeholder consultations — the foundation, before any line is drawn.</p>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="num">ii.</div>
+          <div>
+            <h4>Narrative Structuring</h4>
+            <p>Translating history and ethos into a spatial journey. Sequence. Pacing. Reveals. The grammar of an exhibition is the grammar of a film.</p>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="num">iii.</div>
+          <div>
+            <h4>Design &amp; Spatialisation</h4>
+            <p>Architecture, scenography, materials, light, sound. The five disciplines composed as one experience.</p>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="num">iv.</div>
+          <div>
+            <h4>Execution &amp; Coordination</h4>
+            <p>Multi-agency coordination, compliance, on-ground supervision. The studio is present from blueprint to installation.</p>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="num">v.</div>
+          <div>
+            <h4>Legacy Planning</h4>
+            <p>Reusability, adaptability, long-term cultural value. We design for the second life, the third life, the tenth life of the work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCROLL-REVEAL 2: CULTURAL ARCHITECTURE -->
+<section class="scroll-reveal sr-architecture" data-reveal="2">
+  <div class="sr-sticky">
+    <div class="sr-bg" aria-hidden="true"></div>
+    <div class="sr-vignette" aria-hidden="true"></div>
+    <div class="sr-content">
+      <span class="label">— Cultural Infrastructure</span>
+      <h2 class="display">
+        Architecture as<br/>
+        <span class="it">civilisational</span> language.
+      </h2>
+      <p class="sr-lede">Permanent cultural spaces — museums, interpretation centres, pavilions — where heritage motif meets contemporary form. The architecture itself becomes the medium.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DISTINCT -->
+<section class="distinct">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="label">— What Makes Us Distinct</span>
+        <h2 class="display">
+          A studio for<br/>
+          <span class="it">long-form</span> cultural work.
+        </h2>
+      </div>
+      <p class="lede">Most studios are built for installations. We are built for institutions. Five differences define how we engage, decide, and deliver.</p>
+    </div>
+    <div class="distinct-list">
+      <div class="distinct-item">
+        <div class="n">01.</div>
+        <p>Research-led storytelling — not theme-based design.</p>
+      </div>
+      <div class="distinct-item">
+        <div class="n">02.</div>
+        <p>Comfortable with sensitive cultural, historical, and political narratives.</p>
+      </div>
+      <div class="distinct-item">
+        <div class="n">03.</div>
+        <p>Integration of architecture, scenography, and ritual thinking under one studio.</p>
+      </div>
+      <div class="distinct-item">
+        <div class="n">04.</div>
+        <p>Equally fluent across temporary, permanent, and city-scale projects.</p>
+      </div>
+      <div class="distinct-item" style="grid-column: 1 / -1;">
+        <div class="n">05.</div>
+        <p>Structured for long-term institutional partnerships — not transactional commissions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section class="engagements">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">— Ideal Engagements</span>
+      <h2 class="display">
+        We work best on the projects that<br/>
+        <span class="it">most studios never get to do.</span>
+      </h2>
+    </div>
+    <div class="engagements-grid">
+      <div class="eng-block rust">
+        <div class="head-eng">We Work Best On Projects That</div>
+        <h3>Carry cultural, historical, or national significance.</h3>
+        <ul>
+          <li>Require interpretation rather than decoration</li>
+          <li>Are intended to educate, inspire, and endure</li>
+          <li>Involve collaboration with government bodies, trusts, or institutions</li>
+          <li>Operate across the long horizon, not the event calendar</li>
+        </ul>
+      </div>
+      <div class="eng-block burgundy">
+        <div class="head-eng">We Are Particularly Aligned With</div>
+        <h3>Institutions building India's cultural infrastructure.</h3>
+        <ul>
+          <li>Ministries &amp; state departments</li>
+          <li>Cultural authorities &amp; tourism boards</li>
+          <li>Urban development &amp; smart city missions</li>
+          <li>International cultural forums &amp; events</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="wrap">
+    <div class="x-mark"></div>
+    <h2 class="display">
+      <span class="line">Culture shapes identity.</span>
+      <span class="line">Spaces shape memory.</span>
+      <span class="line"><span class="it">We design both.</span></span>
+    </h2>
+    <div class="sig">— TDX Studio</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="label">— Let's Begin</span>
+        <h2 class="display">
+          The next project<br/>starts with a <span class="it">conversation.</span>
+        </h2>
+        <p class="lede">For institutional collaborations, government commissions, cultural ceremonies, museum projects, and long-form cultural partnerships — write to the studio.</p>
+
+        <div class="contact-info">
+          <div class="row">
+            <span class="label">Studio</span>
+            <div class="v">TDX Studio · Mumbai</div>
+          </div>
+          <div class="row">
+            <span class="label">Principal</span>
+            <div class="v">Tina Dharamsey</div>
+          </div>
+          <div class="row">
+            <span class="label">Email</span>
+            <div class="v"><a href="mailto:info@tdxstudio.in">info@tdxstudio.in</a></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="tdxForm" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send <span>→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bot">
+  <div class="wrap">
+    <div class="row">
+      <div class="brand"><span class="x"></span><span class="name">TDX Studio</span></div>
+      <div>© <span id="year">2026</span> TDX Studio · Tina Dharamsey · Mumbai</div>
+    </div>
+    <div class="credit">
+      Powered by <a href="https://woohoomedialabs.com" target="_blank" rel="noopener">Woo Hoo Media Labs</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // fade-ins
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.statement, .tina-grid, .principle, .domain-card, .tv-card, .bts-card, .method-step, .distinct-item, .eng-block, .manifesto').forEach(el => {
+    el.classList.add('fade-in');
+    io.observe(el);
+  });
+
+  // scroll-reveal cinematic bands — separate observer with lower threshold so it triggers earlier
+  const srIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // don't unobserve — keep listening for re-entry on slow scroll-back, but only trigger transform once via CSS state
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.scroll-reveal').forEach(el => srIo.observe(el));
+
+  // (Parallax is handled by `background-attachment: fixed` in CSS — no JS needed.)
+
+  // form submit — mailto fallback if no Formspree configured
+  document.getElementById('tdxForm').addEventListener('submit', function(e){
+    const action = this.getAttribute('action');
+    if (action.includes('your-form-id')) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`);
+      const subj = encodeURIComponent(`TDX enquiry from ${name}`);
+      window.location.href = `mailto:info@tdxstudio.in?subject=${subj}&body=${body}`;
+    }
+  });
+</script>
+
+</body>
+</html>
